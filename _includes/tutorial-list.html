@@ -1,0 +1,12 @@
+
+<ul>
+  {% for tool in site.pages %}
+    {% if tool.folder == include.folder %}
+      <li>
+        <a href="{{site.baseurl}}{{tool.url}}">
+        {{tool.title}}
+      </a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

@@ -1,0 +1,21 @@
+---
+layout: default
+meta: Tutorials on how to analyze data written for normal people. Makes no assumptions about any knowledge you may have and teaches you about Statistics, Excel, Python, Pandas, SQL, and More.
+titleAfter: Tutorials
+---
+
+{% include breadcrumbs-nav.html %}
+
+<h1> Tutorial:  How to do cool stuff </h1>
+
+<ol>
+{% for tool in site.categories.tool %}
+    <li>
+      <a href="{{site.baseurl}}{{tool.url}}">{{ tool.title }}
+      <p> <img src="{{site.baseurl}}/img/{{tool.image}}" height="128"> </p>
+      </a>
+      <p> {{ tool.meta }} </p>
+
+    </li>
+{% endfor %}
+</ol>

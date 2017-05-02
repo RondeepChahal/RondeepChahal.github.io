@@ -1,0 +1,21 @@
+---
+layout: posts
+titleAfter: New Posts
+meta: New articles related to data analysis, machine learning, AI, psychology, human behavior, decision making, economics, and numbers.
+---
+
+
+<h1> New Posts </h1>
+
+Some content that talks about my posts.
+
+<ul>
+  {% for post in site.posts %}
+    {% if post.type == 'my-content' or post.type == 'reshared-content' %}
+      <li>
+          <a href = "{{site.baseurl}}{{post.url}}">{{post.title}}</a>
+          <p>{{post.meta}}</p>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
